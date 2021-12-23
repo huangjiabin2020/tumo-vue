@@ -17,14 +17,14 @@ const SiteRouter = [
     }]
   },
   {
-    path: '/archives/:id(\\d+)',
+    path: '/articles/:id(\\d+)',
     component: Layout,
     hidden: true,
     redirect: 'noRedirect',
     children: [{
       path: '',
       name: 'siteArchives',
-      component: () => import('@/views/site/archives/index')
+      component: () => import('@/views/site/articles/index')
     }]
   },
   {

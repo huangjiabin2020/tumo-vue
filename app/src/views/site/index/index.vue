@@ -9,7 +9,7 @@
         </div>
         <div v-for="item in list" v-else :key="item.id" class="post-onelist-item">
           <div class="post-onelist-item-container">
-            <router-link :to="'/article/' + item.id">
+            <router-link :to="'/articles/' + item.id">
               <div
                 class="onelist-item-thumb bg-green item-thumb bg-deepgrey
 "
@@ -18,13 +18,13 @@
             </router-link>
             <div class="onelist-item-info">
               <div class="item-title">
-                <router-link :to="'/archives/' + item.id">「{{ item.category.name }}」{{ item.title }}</router-link>
+                <router-link :to="'/articles/' + item.id">「{{ item.category.name }}」{{ item.title }}</router-link>
               </div>
               <div class="item-meta">
                 <time datetime="2020-4-26 10:42:08" itemprop="datePublished">
                   发布于 {{ item.createTime }}
                 </time>in
-                <router-link :to="'/archives/' + item.id">{{ item.category.name }}</router-link>
+                <router-link :to="'/articles/' + item.id">{{ item.category.name }}</router-link>
 
               </div>
               <div
@@ -35,7 +35,7 @@
                 <p v-html="item.des" />
               </div>
               <div class="item-readmore">
-                <router-link :to="'/archives/' + item.id"> 继续阅读 → </router-link>
+                <router-link :to="'/articles/' + item.id"> 继续阅读 → </router-link>
               </div>
             </div>
           </div>

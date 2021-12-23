@@ -54,7 +54,7 @@ router.beforeEach(async(to, from, next) => {
   } else {
     /* has no token*/
 
-    if (whiteList.indexOf(to.path) !== -1 || to.path.startsWith('/archives')) {
+    if (whiteList.indexOf(to.path) !== -1 || to.path.startsWith('/articles')) {
       // start progress bar
       NProgress.start()
       // in the free login whitelist, go directly
